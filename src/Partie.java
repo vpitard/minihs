@@ -1,22 +1,17 @@
 
-public class Partie {
-	private boolean termine;
+public class Partie extends ObserverPv{
 	private int tour;
-	private Joueur joueur1;
-	private Joueur joueur2;
 	
-	public Partie(Joueur joueur1, Joueur joueur2) {
-		this.termine=false;
+	public Partie(JoueurPv joueur1, JoueurPv joueur2) {
+		super(joueur2, joueur2);
 		this.tour=1;
-		this.joueur1 = joueur1;
-		this.joueur2 = joueur2;
 	}
 
-	public Joueur getJoueur1() {
+	public JoueurPv getJoueur1() {
 		return joueur1;
 	}
 
-	public Joueur getJoueur2() {
+	public JoueurPv getJoueur2() {
 		return joueur2;
 	}
 
