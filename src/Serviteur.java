@@ -24,4 +24,24 @@ public abstract class Serviteur extends Carte {
 	protected void enSommeil(){
 		this.etatCourant = this.etatSommeil;
 	}
+
+	public int getPv() {
+		return pv;
+	}
+
+	public void setPv(int pv) {
+		this.pv = pv;
+	}
+
+	public int getAttaque() {
+		return attaque;
+	}
+
+	public void setAttaque(int attaque) {
+		this.attaque = attaque;
+	}
+	
+	public Etat getEtatCourant() {
+		return this.etatCourant;
+	}
 }
