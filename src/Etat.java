@@ -6,7 +6,6 @@ abstract class Etat{
     this.serv = serv;
   }
   
- 
 }
 
 class EtatActif extends Etat{

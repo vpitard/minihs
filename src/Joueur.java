@@ -22,6 +22,9 @@ public class Joueur extends JoueurPv{
 	}
 
 	public void addServiteur(Serviteur serviteur) {
+		if(serviteur.getNom()=="Chef de raid"){
+			serviteursPlusUnAttaque();
+		}
 		this.serviteurs.add(serviteur);
 	}
 
@@ -31,6 +34,20 @@ public class Joueur extends JoueurPv{
 
 	public void setMain(ArrayList<Carte> main) {
 		this.main = main;
+	}
+	
+	public void serviteursPlusUnAttaque(){
+		for(Serviteur s : this.serviteurs){
+			int att = s.getAttaque()+1;
+			s.setAttaque(att);
+		}
+	}
+	
+	public void serviteursMoinsUnAttaque(){
+		for(Serviteur s : this.serviteurs){
+			int att = s.getAttaque()-1;
+			s.setAttaque(att);
+		}
 	}
 	
 	

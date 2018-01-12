@@ -3,7 +3,7 @@ public class Partie extends ObserverPv{
 	private int tour;
 	
 	public Partie(JoueurPv joueur1, JoueurPv joueur2) {
-		super(joueur2, joueur2);
+		super(joueur1, joueur2);
 		this.tour=1;
 	}
 

@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public abstract class JoueurPv {
-	private String nom;
+	protected String nom;
 	protected int pv;
 	protected ArrayList<ObserverPv> obs;
 
@@ -16,18 +16,14 @@ public abstract class JoueurPv {
 	  
 	private void notifier()
 	{
-		System.out.println("culhgfgf" + obs);
 	    for( ObserverPv o : obs ){
-	    	System.out.println("cul");
 	    	o.update( pv );
 	    }
 	}
 
 	public void updatePv(int pv)
 	{
-		System.out.println("----j1----" + getPv());
 		this.pv = pv;
-		System.out.println("----j1----" + getPv());
 	    notifier();
 	}
 	  
