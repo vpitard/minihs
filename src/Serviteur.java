@@ -1,5 +1,5 @@
 
-public abstract class Serviteur extends Carte {
+public class Serviteur extends Carte {
 
 	protected int pv;
 	protected int attaque;
@@ -8,8 +8,8 @@ public abstract class Serviteur extends Carte {
 	protected Etat etatActif;
 	protected Etat etatCourant;
 	
-	public Serviteur(int coût, String nom, String description, int pv, int attaque) {
-		super(coût, nom, description);
+	public Serviteur(int cout, String nom, String description, int pv, int attaque) {
+		super(cout, nom, description);
 		this.pv = pv;
 		this.attaque = attaque;
 		this.etatSommeil = new EtatSommeil(this);

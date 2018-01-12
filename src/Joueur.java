@@ -2,14 +2,16 @@ import java.util.ArrayList;
 
 public class Joueur extends JoueurPv{
 	private int mana;
+	protected String nom;
 	private boolean premier;
 	private int armure;
 	private Heros heros;
 	private ArrayList<Serviteur> serviteurs;
 	private ArrayList<Carte> main;
 	
-	public Joueur(Heros herosChoisi) {
+	public Joueur(Heros herosChoisi, String nom) {
 		super();
+		this.nom = nom;
 		this.mana=1;
 		this.armure=0;
 		this.heros = herosChoisi;
@@ -32,8 +34,8 @@ public class Joueur extends JoueurPv{
 		return main;
 	}
 
-	public void setMain(ArrayList<Carte> main) {
-		this.main = main;
+	public void addCarte(Carte carte) {
+		this.main.add(carte);
 	}
 	
 	public void serviteursPlusUnAttaque(){
@@ -48,6 +50,24 @@ public class Joueur extends JoueurPv{
 			int att = s.getAttaque()-1;
 			s.setAttaque(att);
 		}
+	}
+	
+	public void reveilleServiteurs(){
+		for(Serviteur s : this.serviteurs){
+			s.activer();
+		}
+	}
+	
+	public String getNom() {
+		return nom;
+	}
+
+	public int getMana() {
+		return mana;
+	}
+
+	public void plusUnMana() {
+		this.mana++;
 	}
 	
 	

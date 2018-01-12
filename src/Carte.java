@@ -1,4 +1,3 @@
-
 public abstract class Carte {
 	protected int cout;
 	protected String nom;

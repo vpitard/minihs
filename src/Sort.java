@@ -1,8 +1,8 @@
 
-public abstract class Sort extends Carte {
+public class Sort extends Carte {
 
-	public Sort(int coût, String nom, String description) {
-		super(coût, nom, description);
+	public Sort(int cout, String nom, String description) {
+		super(cout, nom, description);
 		
 	}
 

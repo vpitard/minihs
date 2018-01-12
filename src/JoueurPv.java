@@ -1,7 +1,6 @@
 import java.util.ArrayList;
 
 public abstract class JoueurPv {
-	protected String nom;
 	protected int pv;
 	protected ArrayList<ObserverPv> obs;
 
@@ -30,14 +29,5 @@ public abstract class JoueurPv {
 	public int getPv() {
 		  return pv;
 	}
-
-	public String getNom() {
-		return nom;
-	}
-
-	public void setNom(String nom) {
-		this.nom = nom;
-	}
-	
 	
 }

@@ -1,4 +1,4 @@
-abstract class Etat{
+public abstract class Etat{
   protected Serviteur serv;
 
   public Etat( Serviteur serv )
